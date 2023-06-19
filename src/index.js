@@ -1,5 +1,3 @@
-console.log("hello world");
+import { homeDisplayController } from "./js/home";
 
-const p = document.createElement("p");
-p.textContent = "Hello a";
-document.body.appendChild(p);
+homeDisplayController.setUp();
