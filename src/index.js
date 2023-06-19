@@ -1,3 +1,3 @@
-import { homeDisplayController } from "./js/home";
+import { displayController } from "./js/global";
 
-homeDisplayController.setUp();
+displayController.setUp();
