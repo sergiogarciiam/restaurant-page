@@ -1,6 +1,6 @@
-import createHomeContainer from "./home.js";
-import createMenuContainer from "./menu.js";
-import createContactContainer from "./contact.js";
+import { homeDisplayController } from "./home.js";
+import { menuDisplayController } from "./menu.js";
+import { contactDisplayController } from "./contact.js";
 import "../css/global.css";
 
 const displayController = (() => {
@@ -61,7 +61,7 @@ const displayController = (() => {
     clearActive();
 
     cleanBody();
-    pageContainer.appendChild(createHomeContainer());
+    pageContainer.appendChild(homeDisplayController.createHomeContainer());
   }
 
   function setMenu(event) {
@@ -69,7 +69,7 @@ const displayController = (() => {
     event.target.classList.add("active");
 
     cleanBody();
-    pageContainer.appendChild(createMenuContainer());
+    pageContainer.appendChild(menuDisplayController.createMenuContainer());
   }
 
   function setContact(event) {
@@ -77,7 +77,9 @@ const displayController = (() => {
     event.target.classList.add("active");
 
     cleanBody();
-    pageContainer.appendChild(createContactContainer());
+    pageContainer.appendChild(
+      contactDisplayController.createContactContainer()
+    );
   }
 
   function clearActive() {

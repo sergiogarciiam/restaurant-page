@@ -16,7 +16,6 @@
 
 .book-button {
   background-color: var(--main-color);
-  border: none;
 
   color: var(--letter-color);
   padding: 20px 30px;
@@ -60,7 +59,8 @@
   text-decoration: none;
 }
 
-@media (max-width: 1000px) {
+/* RESPONSIVE */
+@media (max-width: 800px) {
   .home-image {
     display: none;
   }

@@ -2,84 +2,94 @@ import "../css/contact.css";
 import "@fortawesome/fontawesome-free/js/fontawesome";
 import "@fortawesome/fontawesome-free/js/brands";
 
-const createContactContainer = () => {
-  const contactContainer = document.createElement("main");
-  const inputsContainer = document.createElement("div");
-  const socialContainer = document.createElement("div");
-  const iconsContainer = document.createElement("div");
-  const emailAddressTitle = document.createElement("h3");
-  const emailAddress = document.createElement("p");
-  const followUsTitle = document.createElement("h3");
+const contactDisplayController = (() => {
+  const createContactContainer = () => {
+    const contactContainer = document.createElement("main");
+    const inputsContainer = document.createElement("div");
+    const socialContainer = document.createElement("div");
+    const iconsContainer = document.createElement("div");
+    const sendButton = document.createElement("button");
+    const emailAddressTitle = document.createElement("h3");
+    const emailAddress = document.createElement("p");
+    const followUsTitle = document.createElement("h3");
 
-  contactContainer.classList.add("contact-container");
-  inputsContainer.classList.add("inputs-container");
-  socialContainer.classList.add("social-container");
-  iconsContainer.classList.add("icons-container");
+    contactContainer.classList.add("contact-container");
+    inputsContainer.classList.add("inputs-container");
+    socialContainer.classList.add("social-container");
+    iconsContainer.classList.add("icons-container");
 
-  emailAddressTitle.classList.add("social-title");
-  emailAddressTitle.textContent = "Email Address";
-  emailAddress.textContent = "hello@atypicalrestaurant.com";
+    sendButton.textContent = "Send";
+    sendButton.classList.add("send-button");
+    sendButton.type = "button";
 
-  followUsTitle.classList.add("social-title");
-  followUsTitle.textContent = "Follow Us";
+    emailAddressTitle.classList.add("social-title");
+    emailAddressTitle.textContent = "Email Address";
+    emailAddress.textContent = "hello@atypicalrestaurant.com";
 
-  inputsContainer.appendChild(createInput("name"));
-  inputsContainer.appendChild(createInput("email"));
-  inputsContainer.appendChild(createInput("subject"));
-  inputsContainer.appendChild(createArea());
+    followUsTitle.classList.add("social-title");
+    followUsTitle.textContent = "Follow Us";
 
-  iconsContainer.appendChild(createSocialIcon("fa-brands fa-facebook"));
-  iconsContainer.appendChild(createSocialIcon("fa-brands fa-instagram"));
-  iconsContainer.appendChild(createSocialIcon("fa-brands fa-linkedin"));
+    inputsContainer.appendChild(createInput("name"));
+    inputsContainer.appendChild(createInput("email"));
+    inputsContainer.appendChild(createInput("subject"));
+    inputsContainer.appendChild(createArea());
+    inputsContainer.appendChild(sendButton);
 
-  socialContainer.appendChild(emailAddressTitle);
-  socialContainer.appendChild(emailAddress);
-  socialContainer.appendChild(followUsTitle);
-  socialContainer.appendChild(iconsContainer);
+    iconsContainer.appendChild(createSocialIcon("fa-brands fa-facebook"));
+    iconsContainer.appendChild(createSocialIcon("fa-brands fa-instagram"));
+    iconsContainer.appendChild(createSocialIcon("fa-brands fa-linkedin"));
 
-  contactContainer.appendChild(inputsContainer);
-  contactContainer.appendChild(socialContainer);
+    socialContainer.appendChild(emailAddressTitle);
+    socialContainer.appendChild(emailAddress);
+    socialContainer.appendChild(followUsTitle);
+    socialContainer.appendChild(iconsContainer);
 
-  return contactContainer;
-};
+    contactContainer.appendChild(inputsContainer);
+    contactContainer.appendChild(socialContainer);
 
-function createInput(name) {
-  const label = document.createElement("label");
-  const input = document.createElement("input");
+    return contactContainer;
+  };
 
-  label.classList.add("label");
-  label.htmlFor = name + "-input";
-  label.textContent = name;
+  function createInput(name) {
+    const label = document.createElement("label");
+    const input = document.createElement("input");
 
-  input.classList.add("input");
-  input.id = name + "-input";
-  input.name = name + "-input";
+    label.classList.add("label");
+    label.htmlFor = name + "-input";
+    label.textContent = name;
 
-  label.appendChild(input);
-  return label;
-}
+    input.classList.add("input");
+    input.id = name + "-input";
+    input.name = name + "-input";
 
-function createArea() {
-  const label = document.createElement("label");
-  const area = document.createElement("textarea");
+    label.appendChild(input);
+    return label;
+  }
 
-  label.classList.add("label");
-  label.htmlFor = "message-area";
-  label.textContent = "message";
+  function createArea() {
+    const label = document.createElement("label");
+    const area = document.createElement("textarea");
 
-  area.classList.add("area");
-  area.id = "message-area";
-  area.name = "message-area";
+    label.classList.add("label");
+    label.htmlFor = "message-area";
+    label.textContent = "message";
 
-  label.appendChild(area);
+    area.classList.add("area");
+    area.id = "message-area";
+    area.name = "message-area";
 
-  return label;
-}
+    label.appendChild(area);
 
-function createSocialIcon(iconType) {
-  const icon = document.createElement("i");
-  icon.className = iconType;
-  return icon;
-}
+    return label;
+  }
 
-export default createContactContainer;
+  function createSocialIcon(iconType) {
+    const icon = document.createElement("i");
+    icon.className = iconType;
+    return icon;
+  }
+
+  return { createContactContainer };
+})();
+
+export { contactDisplayController };

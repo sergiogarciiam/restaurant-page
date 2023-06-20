@@ -13,8 +13,9 @@
   font-size: 1.5rem;
 }
 
+/* inputs */
 .inputs-container {
-  margin-top: 50px;
+  margin-top: 20px;
   flex: 0.5;
 }
 
@@ -50,9 +51,23 @@
 }
 
 .area {
-  min-height: 400px;
+  min-height: 300px;
 }
 
+.send-button {
+  font-size: 1.5rem;
+  align-self: flex-start;
+  padding: 10px 40px;
+  border-radius: 15px;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: var(--hover-effect);
+}
+
+/* social */
 .social-container {
   margin-top: auto;
   margin-bottom: auto;
@@ -82,9 +97,10 @@
   color: var(--main-color);
 }
 
+/* RESPONSIVE */
 @media (max-width: 800px) {
   .contact-container {
-    gap: 30px;
+    gap: 50px;
   }
 
   .input,

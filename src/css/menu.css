@@ -33,6 +33,7 @@
   height: 350px;
 }
 
+/* RESPONSIVE */
 @media (max-width: 800px) {
   .plates-container > img {
     height: 250px;

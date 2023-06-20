@@ -73,6 +73,7 @@ body {
   text-decoration: underline;
 }
 
+/* RESPONSIVE */
 @media (max-width: 800px) {
   .header-container {
     padding: 20px;
