@@ -64,3 +64,18 @@
 .social-container > p:first-of-type {
   margin-bottom: 40px;
 }
+
+.icons-container {
+  display: flex;
+  gap: 50px;
+}
+
+.icons-container > svg {
+  margin: 20px 0 0 20px;
+  transform: scale(2);
+  cursor: pointer;
+}
+
+.icons-container > svg:hover {
+  color: var(--main-color);
+}

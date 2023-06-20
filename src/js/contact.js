@@ -1,9 +1,12 @@
 import "../css/contact.css";
+import "@fortawesome/fontawesome-free/js/fontawesome";
+import "@fortawesome/fontawesome-free/js/brands";
 
 const createContactContainer = () => {
   const contactContainer = document.createElement("main");
   const inputsContainer = document.createElement("div");
   const socialContainer = document.createElement("div");
+  const iconsContainer = document.createElement("div");
   const emailAddressTitle = document.createElement("h3");
   const emailAddress = document.createElement("p");
   const followUsTitle = document.createElement("h3");
@@ -11,10 +14,10 @@ const createContactContainer = () => {
   contactContainer.classList.add("contact-container");
   inputsContainer.classList.add("inputs-container");
   socialContainer.classList.add("social-container");
+  iconsContainer.classList.add("icons-container");
 
   emailAddressTitle.classList.add("social-title");
   emailAddressTitle.textContent = "Email Address";
-
   emailAddress.textContent = "hello@atypicalrestaurant.com";
 
   followUsTitle.classList.add("social-title");
@@ -25,10 +28,14 @@ const createContactContainer = () => {
   inputsContainer.appendChild(createInput("subject"));
   inputsContainer.appendChild(createArea());
 
+  iconsContainer.appendChild(createSocialIcon("fa-brands fa-facebook"));
+  iconsContainer.appendChild(createSocialIcon("fa-brands fa-instagram"));
+  iconsContainer.appendChild(createSocialIcon("fa-brands fa-linkedin"));
+
   socialContainer.appendChild(emailAddressTitle);
   socialContainer.appendChild(emailAddress);
   socialContainer.appendChild(followUsTitle);
-  socialContainer.appendChild(createAuthor());
+  socialContainer.appendChild(iconsContainer);
 
   contactContainer.appendChild(inputsContainer);
   contactContainer.appendChild(socialContainer);
@@ -69,13 +76,10 @@ function createArea() {
   return label;
 }
 
-function createAuthor() {
-  const pageAuthor = document.createElement("p");
-
-  pageAuthor.classList.add("author");
-  pageAuthor.textContent = "By Sergio García";
-
-  return pageAuthor;
+function createSocialIcon(iconType) {
+  const icon = document.createElement("i");
+  icon.className = iconType;
+  return icon;
 }
 
 export default createContactContainer;

@@ -26,8 +26,24 @@ const createHomeContainer = () => {
   homeContainer.appendChild(opacityContainer);
   homeContainer.appendChild(question);
   homeContainer.appendChild(bookButton);
+  homeContainer.appendChild(createAuthor());
 
   return homeContainer;
 };
+
+function createAuthor() {
+  const author = document.createElement("p");
+  author.classList.add("author");
+
+  const authorLink = document.createElement("a");
+  authorLink.textContent = "Sergio García";
+  authorLink.href = "https://github.com/sergiogarciiam";
+  authorLink.target = "__blank";
+
+  author.appendChild(document.createTextNode("By "));
+  author.appendChild(authorLink);
+
+  return author;
+}
 
 export default createHomeContainer;

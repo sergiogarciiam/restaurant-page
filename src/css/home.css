@@ -43,6 +43,23 @@
   z-index: -1;
 }
 
+.author {
+  margin-top: auto;
+  align-self: flex-end;
+  margin: auto 10px 10px 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.author > a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.author > a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1000px) {
   .home-image {
     display: none;
