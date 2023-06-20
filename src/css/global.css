@@ -1,7 +1,8 @@
 /* GENERAL */
 :root {
   --letter-color: #eee;
-  --background-color: #111;
+  --header-color: #111;
+  --background-color: #222;
   --main-color: #725736;
   --hover-effect: #60513f;
 }
@@ -34,7 +35,7 @@ body {
   align-items: center;
   justify-content: space-around;
 
-  background-color: var(--background-color);
+  background-color: var(--header-color);
 }
 
 .title {

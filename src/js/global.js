@@ -9,7 +9,8 @@ const displayController = (() => {
   const setUp = () => {
     pageContainerSetUp();
     headerContainerSetUp();
-    setHome();
+    //setHome();
+    setContact();
   };
 
   function pageContainerSetUp() {
@@ -74,7 +75,7 @@ const displayController = (() => {
 
   function setContact(event) {
     clearActive();
-    event.target.classList.add("active");
+    //event.target.classList.add("active");
 
     cleanBody();
     pageContainer.appendChild(createContactContainer());
