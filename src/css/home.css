@@ -45,8 +45,7 @@
 
 .author {
   margin-top: auto;
-  align-self: flex-end;
-  margin: auto 10px 10px 0;
+  margin-bottom: 10px;
   font-size: 1.5rem;
   font-weight: bolder;
 }
