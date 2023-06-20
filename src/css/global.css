@@ -72,3 +72,13 @@ body {
   color: var(--main-color);
   text-decoration: underline;
 }
+
+@media (max-width: 800px) {
+  .header-container {
+    padding: 20px;
+  }
+  .title {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

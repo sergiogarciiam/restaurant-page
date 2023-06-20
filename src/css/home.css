@@ -51,12 +51,13 @@
 }
 
 .author > a {
-  color: var(--main-color);
-  text-decoration: none;
+  color: var(--letter-color);
 }
 
 .author > a:hover {
-  text-decoration: underline;
+  color: var(--main-color);
+
+  text-decoration: none;
 }
 
 @media (max-width: 1000px) {
@@ -66,5 +67,10 @@
 
   .home-container {
     background-color: var(--background-color);
+  }
+
+  .question {
+    font-size: 4rem;
+    margin-top: 100px;
   }
 }

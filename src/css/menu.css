@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   gap: 50px;
+  overflow-y: auto;
 
   background-color: var(--background-color);
 }
@@ -30,4 +31,10 @@
 
 .plates-container > img {
   height: 350px;
+}
+
+@media (max-width: 800px) {
+  .plates-container > img {
+    height: 250px;
+  }
 }
