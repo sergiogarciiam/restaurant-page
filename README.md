@@ -1,6 +1,6 @@
 # Restaurant Page
 
-A simple restaurant page created with html, css and js
+A simple restaurant page from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page) curriculum.
 
 ## Learnings
 
