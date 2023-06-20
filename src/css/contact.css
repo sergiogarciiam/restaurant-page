@@ -61,6 +61,7 @@
   border-radius: 15px;
   background-color: var(--main-color);
   cursor: pointer;
+  border: none;
 }
 
 .send-button:hover {
