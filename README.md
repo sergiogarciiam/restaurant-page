@@ -9,6 +9,18 @@ A simple restaurant page created with html, css and js
 
 ## Screenshots
 
+### Design in Figma
+
+![figma](./src/images/screenshots/figma-design.png)
+
+### Final Result
+
+![home](./src/images/screenshots/home.png)
+
+![menu](./src/images/screenshots/menu.png)
+
+![contact](./src/images/screenshots/contact.png)
+
 ## Acknowledgements
 
 - Project idea by [The Odin Project](https://www.theodinproject.com/)
