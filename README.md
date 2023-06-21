@@ -39,6 +39,8 @@ A simple restaurant page from [The Odin Project](https://www.theodinproject.com/
 
   - [CA Creative](https://unsplash.com/@ca_creative?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
+- Web icon from [favicon](https://favicon.io/)
+
 ## Author
 
 [Sergio García](https://github.com/sergiogarciiam)
